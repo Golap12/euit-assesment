@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/2c5c5e3d8a.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+
+
+    <style>
+        .faq-answer {
+            display: none;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f9;
+            color: #333333;
+        }
+
+        .nav-link:hover {
+            color: #3498db;
+        }
+
+        .button {
+            background-color: #3498db;
+            color: #ffffff;
+        }
+
+        .button:hover {
+            background-color: #2ecc71;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <header>
+
+        <!-- nav  -->
+        <nav class="fixed z-20 w-full">
+            <div class="absolute w-full top-0 z-10 text-white px-5 py-4 bg-black/40 shadow-2xl backdrop-blur-xl">
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center">
+                        <img class="h-10 w-10" src="./image/logo.png" alt="Logo">
+                        <h3 class="text-2xl font-bold"><span class="text-4xl">F</span>ood<span class="text-amber-400 text-4xl">I</span>CE</h3>
+                    </div>
+                    <button id="menuBtn" class="block lg:hidden"><i class="fa-solid fa-bars"></i>
+                    </button>
+                    <ul id="navLinks" class="hidden lg:flex lg:space-x-6 text-sm font-medium">
+                        <li><a class="nav-link" href="./index.html">Home</a></li>
+                        <li><a class="nav-link" href="./about.html">About</a></li>
+                        <li><a class="nav-link" href="./contact.html">Contact</a></li>
+                        <li><a class="nav-link" href="./FAQ.html">FAQ</a></li>
+                    </ul>
+                    <button
+                        class="hidden lg:block button px-4 py-2 text-sm font-medium transition-all border-2 border-[#3498db] hover:border-white hover:border-2 hover:backdrop-blur-lg hover:bg-transparent">Login</button>
+                </div>
+
+                <div id="mobileMenu" class="lg:hidden mt-4 border-t border-gray-200 p-4 hidden backdrop-blur-md">
+                    <ul class="flex flex-col items-center text-sm">
+                        <li class="mb-2"><a class="block py-2 text-center" href="./index.html">Home</a>
+                        </li>
+                        <li class="mb-2"><a class="block py-2 text-center" href="./about.html">About</a>
+                        </li>
+                        <li class="mb-2"><a class="block py-2 text-center"
+                                href="./contact.html">Contact</a>
+                        </li>
+                        <li><a class="block py-2 text-center" href="./FAQ.html">FAQ</a></li>
+                    </ul>
+                    <div class="flex justify-center">
+                        <button
+                            class=" mt-4 mx-auto button px-4 text-sm py-2 font-medium transition-all border-2 border-[#3498db] hover:border-white hover:backdrop-blur-lg hover:bg-transparent hover:border-2">Login</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+
+        <!-- Hero  -->
+        <div class="relative h-[600px]">
+            <div class="absolute inset-0">
+                <img src="./image/1 (2).jpg" alt="Background Image" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-black/90"></div>
+            </div>
+
+            <div class="absolute md:top-[20%] top-[10%] md:left-[8.5%] px-10 flex md:flex-row justify-center items-center text-white gap-2 md:gap-0 flex-col-reverse">
+
+                <div class="flex-1 flex flex-col items-center justify-cente">
+                    <div class="text-center md:text-left">
+                        <p class="font-extrabold mb-2 hidden">GOLAP HASAN</p>
+                        <h1 class="md:text-5xl text-3xl font-bold mb-4 md:w-[80%] w-[70%] mx-auto md:mx-0">Discover Delicious <span class="text-lime-500">Ice Creams</span></h1>
+                        <p class="text-sm mb-8">Indulge in a delightful journey of flavors. From creamy classics to
+                            exotic sorbets, our artisanal ice creams are crafted to satisfy every palate.</p>
+                        <button>
+                            <a href="#"
+                            class="bg-blue-500 text-white hover:border-2 hover:border-white px-5 py-2 border-2 border-blue-500  font-semibold hover:backdrop-blur-lg hover:bg-transparent transition duration-300">Explore
+                            Now</a>
+                            <a href="#"
+                            class="bg-inherit text-white border-2 hover:border-white px-7 py-2  font-semibold hover:backdrop-blur-lg hover:bg-transparent transition duration-300">Sign Up</a>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="flex-1 md:flex items-center justify-center ">
+                    <div class="backdrop-blur-s">
+                        <img class="md:w-[300px] md:h-[400px] w-[180px] h-[250px]" src="./image/ice.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </header>
+
+
+
+    <main>
+
+        <div class="mx-auto my-10 px-5 py-8 container bg-slate-50">
+            <div class="mb-8 text-center container">
+                <h1 class="text-3xl font-bold mb-2">Our Menu</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, delectus?</p>
+            </div>
+
+            <!-- Menu Items -->
+            <div class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+
+
+
+                <div
+                    class="bg-white rounded-lg shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] overflow-hidden flex flex-col h-full">
+                    <img src="./image/1 (1).jpg" alt="Grilled Chicken Caesar Salad" class="w-full h-48 object-cover">
+                    <div class="p-4 flex flex-col flex-grow">
+                        <h2 class="text-xl font-bold mb-2">ChocoBerry Bliss</h2>
+                        <p class="text-gray-700 mb-4 flex-grow">Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. Commodi voluptatibus dolores voluptas obcaecati.</p>
+                        <div class="flex justify-between items-center mt-auto">
+                            <p class="text-gray-800 font-bold">$30.99</p>
+                            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Buy
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="bg-white rounded-lg shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] overflow-hidden flex flex-col h-full">
+                    <img src="./image/1 (2).jpg" alt="Grilled Chicken Caesar Salad" class="w-full h-48 object-cover">
+                    <div class="p-4 flex flex-col flex-grow">
+                        <h2 class="text-xl font-bold mb-2">ChocoBerry Bliss</h2>
+                        <p class="text-gray-700 mb-4 flex-grow">Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. Commodi voluptatibus dolores voluptas obcaecati.</p>
+                        <div class="flex justify-between items-center mt-auto">
+                            <p class="text-gray-800 font-bold">$30.99</p>
+                            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Buy
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="bg-white rounded-lg shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] overflow-hidden flex flex-col h-full">
+                    <img src="./image/1 (3).jpg" alt="Grilled Chicken Caesar Salad" class="w-full h-48 object-cover">
+                    <div class="p-4 flex flex-col flex-grow">
+                        <h2 class="text-xl font-bold mb-2">ChocoBerry Bliss</h2>
+                        <p class="text-gray-700 mb-4 flex-grow">Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. Commodi voluptatibus dolores voluptas obcaecati.</p>
+                        <div class="flex justify-between items-center mt-auto">
+                            <p class="text-gray-800 font-bold">$30.99</p>
+                            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Buy
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="bg-white rounded-lg shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] overflow-hidden flex flex-col h-full">
+                    <img src="./image/1 (4).jpg" alt="Grilled Chicken Caesar Salad" class="w-full h-48 object-cover">
+                    <div class="p-4 flex flex-col flex-grow">
+                        <h2 class="text-xl font-bold mb-2">ChocoBerry Bliss</h2>
+                        <p class="text-gray-700 mb-4 flex-grow">Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. Commodi voluptatibus dolores voluptas obcaecati.</p>
+                        <div class="flex justify-between items-center mt-auto">
+                            <p class="text-gray-800 font-bold">$30.99</p>
+                            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Buy
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+        <!-- ------------------------------------ -->
+
+
+
+
+        <!-- ------ Customer Feedback--------- -->
+
+        <section aria-label="What our customers are saying" class="bg-slate-50 container mx-auto">
+            <div class="mx-auto px-4 sm:p-6 lg:px-8">
+                <div class="mx-auto max-w-2xl md:text-center">
+                    <h2 class="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl text-center">What Our
+                        Customers Are Saying</h2>
+                </div>
+
+                <ul role="list"
+                    class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-6 sm:gap-8 lg:mt-20 lg:max-w-none lg:grid-cols-3 *:shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] *:rounded-lg">
+                    <li>
+                        <ul role="list" class="flex flex-col gap-y-6 sm:gap-y-8">
+                            <li>
+                                <figure class="relative rounded-2xl bg-white p-6 shadow-xl shadow-slate-900/10">
+                                    <svg aria-hidden="true" width="105" height="78"
+                                        class="absolute left-6 top-6 fill-slate-100">
+                                        <path
+                                            d="M25.086 77.292c-4.821 0-9.115-1.205-12.882-3.616-3.767-2.561-6.78-6.102-9.04-10.622C1.054 58.534 0 53.411 0 47.686c0-5.273.904-10.396 2.712-15.368 1.959-4.972 4.746-9.567 8.362-13.786a59.042 59.042 0 0 1 12.43-11.3C28.325 3.917 33.599 1.507 39.324 0l11.074 13.786c-6.479 2.561-11.677 5.951-15.594 10.17-3.767 4.219-5.65 7.835-5.65 10.848 0 1.356.377 2.863 1.13 4.52.904 1.507 2.637 3.089 5.198 4.746 3.767 2.41 6.328 4.972 7.684 7.684 1.507 2.561 2.26 5.5 2.26 8.814 0 5.123-1.959 9.19-5.876 12.204-3.767 3.013-8.588 4.52-14.464 4.52Zm54.24 0c-4.821 0-9.115-1.205-12.882-3.616-3.767-2.561-6.78-6.102-9.04-10.622-2.11-4.52-3.164-9.643-3.164-15.368 0-5.273.904-10.396 2.712-15.368 1.959-4.972 4.746-9.567 8.362-13.786a59.042 59.042 0 0 1 12.43-11.3C82.565 3.917 87.839 1.507 93.564 0l11.074 13.786c-6.479 2.561-11.677 5.951-15.594 10.17-3.767 4.219-5.65 7.835-5.65 10.848 0 1.356.377 2.863 1.13 4.52.904 1.507 2.637 3.089 5.198 4.746 3.767 2.41 6.328 4.972 7.684 7.684 1.507 2.561 2.26 5.5 2.26 8.814 0 5.123-1.959 9.19-5.876 12.204-3.767 3.013-8.588 4.52-14.464 4.52Z">
+                                        </path>
+                                    </svg>
+                                    <blockquote class="relative">
+                                        <p class="text-lg tracking-tight text-slate-900">I love the fitness
+                                            apparel and gear I purchased from
+                                            this site. The quality is exceptional and the prices are unbeatable.
+                                        </p>
+                                    </blockquote>
+                                    <figcaption
+                                        class="relative mt-6 flex items-center justify-between border-t border-slate-100 pt-6">
+                                        <div>
+                                            <div class="font-display text-base text-slate-900">Sheryl Berge
+                                            </div>
+                                        </div>
+                                        <div class="overflow-hidden  bg-slate-50">
+                                            <img alt="" class="h-14 w-14 object-cover" style="color:transparent"
+                                                src="https://randomuser.me/api/portraits/men/15.jpg">
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <ul role="list" class="flex flex-col gap-y-6 sm:gap-y-8">
+                            <li>
+                                <figure class="relative rounded-2xl bg-white p-6 shadow-xl shadow-slate-900/10">
+                                    <svg aria-hidden="true" width="105" height="78"
+                                        class="absolute left-6 top-6 fill-slate-100">
+                                        <path
+                                            d="M25.086 77.292c-4.821 0-9.115-1.205-12.882-3.616-3.767-2.561-6.78-6.102-9.04-10.622C1.054 58.534 0 53.411 0 47.686c0-5.273.904-10.396 2.712-15.368 1.959-4.972 4.746-9.567 8.362-13.786a59.042 59.042 0 0 1 12.43-11.3C28.325 3.917 33.599 1.507 39.324 0l11.074 13.786c-6.479 2.561-11.677 5.951-15.594 10.17-3.767 4.219-5.65 7.835-5.65 10.848 0 1.356.377 2.863 1.13 4.52.904 1.507 2.637 3.089 5.198 4.746 3.767 2.41 6.328 4.972 7.684 7.684 1.507 2.561 2.26 5.5 2.26 8.814 0 5.123-1.959 9.19-5.876 12.204-3.767 3.013-8.588 4.52-14.464 4.52Zm54.24 0c-4.821 0-9.115-1.205-12.882-3.616-3.767-2.561-6.78-6.102-9.04-10.622-2.11-4.52-3.164-9.643-3.164-15.368 0-5.273.904-10.396 2.712-15.368 1.959-4.972 4.746-9.567 8.362-13.786a59.042 59.042 0 0 1 12.43-11.3C82.565 3.917 87.839 1.507 93.564 0l11.074 13.786c-6.479 2.561-11.677 5.951-15.594 10.17-3.767 4.219-5.65 7.835-5.65 10.848 0 1.356.377 2.863 1.13 4.52.904 1.507 2.637 3.089 5.198 4.746 3.767 2.41 6.328 4.972 7.684 7.684 1.507 2.561 2.26 5.5 2.26 8.814 0 5.123-1.959 9.19-5.876 12.204-3.767 3.013-8.588 4.52-14.464 4.52Z">
+                                        </path>
+                                    </svg>
+                                    <blockquote class="relative">
+                                        <p class="text-lg tracking-tight text-slate-900">As a professional
+                                            athlete, I rely on high-performance
+                                            gear for my training. This site offers a great selection of
+                                            top-notch products.</p>
+                                    </blockquote>
+                                    <figcaption
+                                        class="relative mt-6 flex items-center justify-between border-t border-slate-100 pt-6">
+                                        <div>
+                                            <div class="font-display text-base text-slate-900">Leland Kiehn
+                                            </div>
+                                        </div>
+                                        <div class="overflow-hidden  bg-slate-50">
+                                            <img alt="" class="h-14 w-14 object-cover" style="color:transparent"
+                                                src="https://randomuser.me/api/portraits/women/15.jpg">
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <ul role="list" class="flex flex-col gap-y-6 sm:gap-y-8">
+                            <li>
+                                <figure class="relative rounded-2xl bg-white p-6 shadow-xl shadow-slate-900/10">
+                                    <svg aria-hidden="true" width="105" height="78"
+                                        class="absolute left-6 top-6 fill-slate-100">
+                                        <path
+                                            d="M25.086 77.292c-4.821 0-9.115-1.205-12.882-3.616-3.767-2.561-6.78-6.102-9.04-10.622C1.054 58.534 0 53.411 0 47.686c0-5.273.904-10.396 2.712-15.368 1.959-4.972 4.746-9.567 8.362-13.786a59.042 59.042 0 0 1 12.43-11.3C28.325 3.917 33.599 1.507 39.324 0l11.074 13.786c-6.479 2.561-11.677 5.951-15.594 10.17-3.767 4.219-5.65 7.835-5.65 10.848 0 1.356.377 2.863 1.13 4.52.904 1.507 2.637 3.089 5.198 4.746 3.767 2.41 6.328 4.972 7.684 7.684 1.507 2.561 2.26 5.5 2.26 8.814 0 5.123-1.959 9.19-5.876 12.204-3.767 3.013-8.588 4.52-14.464 4.52Zm54.24 0c-4.821 0-9.115-1.205-12.882-3.616-3.767-2.561-6.78-6.102-9.04-10.622-2.11-4.52-3.164-9.643-3.164-15.368 0-5.273.904-10.396 2.712-15.368 1.959-4.972 4.746-9.567 8.362-13.786a59.042 59.042 0 0 1 12.43-11.3C82.565 3.917 87.839 1.507 93.564 0l11.074 13.786c-6.479 2.561-11.677 5.951-15.594 10.17-3.767 4.219-5.65 7.835-5.65 10.848 0 1.356.377 2.863 1.13 4.52.904 1.507 2.637 3.089 5.198 4.746 3.767 2.41 6.328 4.972 7.684 7.684 1.507 2.561 2.26 5.5 2.26 8.814 0 5.123-1.959 9.19-5.876 12.204-3.767 3.013-8.588 4.52-14.464 4.52Z">
+                                        </path>
+                                    </svg>
+                                    <blockquote class="relative">
+                                        <p class="text-lg tracking-tight text-slate-900">The fitness apparel I
+                                            bought here fits perfectly and
+                                            feels amazing. I highly recommend this store to anyone looking for
+                                            quality gear.</p>
+                                    </blockquote>
+                                    <figcaption
+                                        class="relative mt-6 flex items-center justify-between border-t border-slate-100 pt-6">
+                                        <div>
+                                            <div class="font-display text-base text-slate-900">Peter Renolds
+                                            </div>
+                                        </div>
+                                        <div class="overflow-hidden  bg-slate-50">
+                                            <img alt="" class="h-14 w-14 object-cover" style="color:transparent"
+                                                src="https://randomuser.me/api/portraits/men/10.jpg">
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <ul role="list" class="flex flex-col gap-y-6 sm:gap-y-8">
+                            <li>
+                                <figure class="relative rounded-2xl bg-white p-6 shadow-xl shadow-slate-900/10">
+                                    <svg aria-hidden="true" width="105" height="78"
+                                        class="absolute left-6 top-6 fill-slate-100">
+                                        <path
+                                            d="M25.086 77.292c-4.821 0-9.115-1.205-12.882-3.616-3.767-2.561-6.78-6.102-9.04-10.622C1.054 58.534 0 53.411 0 47.686c0-5.273.904-10.396 2.712-15.368 1.959-4.972 4.746-9.567 8.362-13.786a59.042 59.042 0 0 1 12.43-11.3C28.325 3.917 33.599 1.507 39.324 0l11.074 13.786c-6.479 2.561-11.677 5.951-15.594 10.17-3.767 4.219-5.65 7.835-5.65 10.848 0 1.356.377 2.863 1.13 4.52.904 1.507 2.637 3.089 5.198 4.746 3.767 2.41 6.328 4.972 7.684 7.684 1.507 2.561 2.26 5.5 2.26 8.814 0 5.123-1.959 9.19-5.876 12.204-3.767 3.013-8.588 4.52-14.464 4.52Zm54.24 0c-4.821 0-9.115-1.205-12.882-3.616-3.767-2.561-6.78-6.102-9.04-10.622-2.11-4.52-3.164-9.643-3.164-15.368 0-5.273.904-10.396 2.712-15.368 1.959-4.972 4.746-9.567 8.362-13.786a59.042 59.042 0 0 1 12.43-11.3C82.565 3.917 87.839 1.507 93.564 0l11.074 13.786c-6.479 2.561-11.677 5.951-15.594 10.17-3.767 4.219-5.65 7.835-5.65 10.848 0 1.356.377 2.863 1.13 4.52.904 1.507 2.637 3.089 5.198 4.746 3.767 2.41 6.328 4.972 7.684 7.684 1.507 2.561 2.26 5.5 2.26 8.814 0 5.123-1.959 9.19-5.876 12.204-3.767 3.013-8.588 4.52-14.464 4.52Z">
+                                        </path>
+                                    </svg>
+                                    <blockquote class="relative">
+                                        <p class="text-lg tracking-tight text-slate-900">As a professional
+                                            athlete, I rely on high-performance
+                                            gear for my training. This site offers a great selection of
+                                            top-notch products.</p>
+                                    </blockquote>
+                                    <figcaption
+                                        class="relative mt-6 flex items-center justify-between border-t border-slate-100 pt-6">
+                                        <div>
+                                            <div class="font-display text-base text-slate-900">Leland Kiehn
+                                            </div>
+                                        </div>
+                                        <div class="overflow-hidden  bg-slate-50">
+                                            <img alt="" class="h-14 w-14 object-cover" style="color:transparent"
+                                                src="https://randomuser.me/api/portraits/women/15.jpg">
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul role="list" class="flex flex-col gap-y-6 sm:gap-y-8">
+                            <li>
+                                <figure class="relative rounded-2xl bg-white p-6 shadow-xl shadow-slate-900/10">
+                                    <svg aria-hidden="true" width="105" height="78"
+                                        class="absolute left-6 top-6 fill-slate-100">
+                                        <path
+                                            d="M25.086 77.292c-4.821 0-9.115-1.205-12.882-3.616-3.767-2.561-6.78-6.102-9.04-10.622C1.054 58.534 0 53.411 0 47.686c0-5.273.904-10.396 2.712-15.368 1.959-4.972 4.746-9.567 8.362-13.786a59.042 59.042 0 0 1 12.43-11.3C28.325 3.917 33.599 1.507 39.324 0l11.074 13.786c-6.479 2.561-11.677 5.951-15.594 10.17-3.767 4.219-5.65 7.835-5.65 10.848 0 1.356.377 2.863 1.13 4.52.904 1.507 2.637 3.089 5.198 4.746 3.767 2.41 6.328 4.972 7.684 7.684 1.507 2.561 2.26 5.5 2.26 8.814 0 5.123-1.959 9.19-5.876 12.204-3.767 3.013-8.588 4.52-14.464 4.52Zm54.24 0c-4.821 0-9.115-1.205-12.882-3.616-3.767-2.561-6.78-6.102-9.04-10.622-2.11-4.52-3.164-9.643-3.164-15.368 0-5.273.904-10.396 2.712-15.368 1.959-4.972 4.746-9.567 8.362-13.786a59.042 59.042 0 0 1 12.43-11.3C82.565 3.917 87.839 1.507 93.564 0l11.074 13.786c-6.479 2.561-11.677 5.951-15.594 10.17-3.767 4.219-5.65 7.835-5.65 10.848 0 1.356.377 2.863 1.13 4.52.904 1.507 2.637 3.089 5.198 4.746 3.767 2.41 6.328 4.972 7.684 7.684 1.507 2.561 2.26 5.5 2.26 8.814 0 5.123-1.959 9.19-5.876 12.204-3.767 3.013-8.588 4.52-14.464 4.52Z">
+                                        </path>
+                                    </svg>
+                                    <blockquote class="relative">
+                                        <p class="text-lg tracking-tight text-slate-900">As a professional
+                                            athlete, I rely on high-performance
+                                            gear for my training. This site offers a great selection of
+                                            top-notch products.</p>
+                                    </blockquote>
+                                    <figcaption
+                                        class="relative mt-6 flex items-center justify-between border-t border-slate-100 pt-6">
+                                        <div>
+                                            <div class="font-display text-base text-slate-900">Leland Kiehn
+                                            </div>
+                                        </div>
+                                        <div class="overflow-hidden  bg-slate-50">
+                                            <img alt="" class="h-14 w-14 object-cover" style="color:transparent"
+                                                src="https://randomuser.me/api/portraits/women/15.jpg">
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul role="list" class="flex flex-col gap-y-6 sm:gap-y-8">
+                            <li>
+                                <figure class="relative rounded-2xl bg-white p-6 shadow-xl shadow-slate-900/10">
+                                    <svg aria-hidden="true" width="105" height="78"
+                                        class="absolute left-6 top-6 fill-slate-100">
+                                        <path
+                                            d="M25.086 77.292c-4.821 0-9.115-1.205-12.882-3.616-3.767-2.561-6.78-6.102-9.04-10.622C1.054 58.534 0 53.411 0 47.686c0-5.273.904-10.396 2.712-15.368 1.959-4.972 4.746-9.567 8.362-13.786a59.042 59.042 0 0 1 12.43-11.3C28.325 3.917 33.599 1.507 39.324 0l11.074 13.786c-6.479 2.561-11.677 5.951-15.594 10.17-3.767 4.219-5.65 7.835-5.65 10.848 0 1.356.377 2.863 1.13 4.52.904 1.507 2.637 3.089 5.198 4.746 3.767 2.41 6.328 4.972 7.684 7.684 1.507 2.561 2.26 5.5 2.26 8.814 0 5.123-1.959 9.19-5.876 12.204-3.767 3.013-8.588 4.52-14.464 4.52Zm54.24 0c-4.821 0-9.115-1.205-12.882-3.616-3.767-2.561-6.78-6.102-9.04-10.622-2.11-4.52-3.164-9.643-3.164-15.368 0-5.273.904-10.396 2.712-15.368 1.959-4.972 4.746-9.567 8.362-13.786a59.042 59.042 0 0 1 12.43-11.3C82.565 3.917 87.839 1.507 93.564 0l11.074 13.786c-6.479 2.561-11.677 5.951-15.594 10.17-3.767 4.219-5.65 7.835-5.65 10.848 0 1.356.377 2.863 1.13 4.52.904 1.507 2.637 3.089 5.198 4.746 3.767 2.41 6.328 4.972 7.684 7.684 1.507 2.561 2.26 5.5 2.26 8.814 0 5.123-1.959 9.19-5.876 12.204-3.767 3.013-8.588 4.52-14.464 4.52Z">
+                                        </path>
+                                    </svg>
+                                    <blockquote class="relative">
+                                        <p class="text-lg tracking-tight text-slate-900">As a professional
+                                            athlete, I rely on high-performance
+                                            gear for my training. This site offers a great selection of
+                                            top-notch products.</p>
+                                    </blockquote>
+                                    <figcaption
+                                        class="relative mt-6 flex items-center justify-between border-t border-slate-100 pt-6">
+                                        <div>
+                                            <div class="font-display text-base text-slate-900">Leland Kiehn
+                                            </div>
+                                        </div>
+                                        <div class="overflow-hidden  bg-slate-50">
+                                            <img alt="" class="h-14 w-14 object-cover" style="color:transparent"
+                                                src="https://randomuser.me/api/portraits/women/15.jpg">
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+        <!-- ------------------------------------  -->
+
+
+
+        <!-- Gallery Section------- -->
+
+        <div class="container mx-auto my-12 bg-slate-50 md:py-20 md:px-8">
+
+            <div class="mb-8 text-center">
+                <h1 class="text-3xl font-bold mb-2">Our Gallery</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, architecto.</p>
+            </div>
+
+
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-5 md:p-0  *:p-3 *:shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] *: *:overflow-hidden">
+                <!-- Image 1 -->
+                <div class="relative">
+                    <img src="./image/gal (1).jpg" alt="Image 1" class="">
+                </div>
+
+                <!-- Image 2 -->
+                <div class="relative">
+                    <img src="./image/gal (2).jpg" alt="Image 2" class="">
+                </div>
+
+                <!-- Image 3 -->
+                <div class="relative">
+                    <img src="./image/gal (3).jpg" alt="Image 3" class="">
+                </div>
+
+                <!-- Image 4 -->
+                <div class="relative">
+                    <img src="./image/gal (6).jpg" alt="Image 6" class="">
+                </div>
+
+                <!-- Image 5 -->
+                <div class="relative">
+                    <img src="./image/gal (5).jpg" alt="Image 5" class="">
+                </div>
+
+
+                <div class="relative">
+                    <img src="./image/gal (6).jpg" alt="Image 6" class="">
+                </div>
+            </div>
+        </div>
+        <!-- --------------------------------------------  --->
+
+
+        <!-- ---------FAQ----------- -->
+
+        
+              
+        <!-- ----------------------------------------  -->
+
+
+
+        <!-- Social Media Section  -->
+
+        <div
+            class="container mx-auto mt-8 lg:my-12 ">
+
+            <div class="bg-[#22697e72] text-center py-8 space-y-6">
+                <div>
+                    <h2 class="text-2xl font-extrabold">Social Media</h2>
+                </div>
+
+                <div class="text-center space-x-7">
+                    <a href=""><i
+                            class="fa-brands fa-twitter text-2xl hover:text-red-500 hover:-translate-y-5 hover:transition-all"></i></a>
+                    <a href="https://www.facebook.com/golap.hasan.315"><i
+                            class="fa-brands fa-facebook-f text-2xl hover:text-red-500 hover:-translate-y-5 hover:transition-all"></i></a>
+                    <a href=""><i
+                            class="fa-brands fa-instagram font-extrabold text-2xl hover:text-red-500 hover:-translate-y-5 hover:transition-all"></i></a>
+                    <a href=""><i
+                            class="fa-brands fa-github text-2xl hover:text-red-500 hover:-translate-y-5 hover:transition-all"></i></a>
+                </div>
+            </div>
+
+        </div>
+        <!-- ---------------------------------------  -->
+
+
+    </main>
+
+    
+
+    <!-- Footer  -->
+
+    <footer id="footer" class="bg-black lg:mt-0 mt-10 md:p-20 p-10">
+
+        <div>
+            <div class="flex flex-col lg:flex-row lg:justify-around gap-10 ">
+
+
+                <div class="flex flex-col gap-5 lg:items-start items-center">
+                    <div class="flex flex-col gap-4 items-center lg:items-start">
+                        <h2
+                            class="text-2xl font-extrabold text-white hover:text-fuchsia-400 hover:text-4xl hover:transition-all">
+                            Get In Touch</h2>
+                        <p
+                            class="w-[300px] text-center lg:text-left font-medium text-[#FFFFFF99] hover:font-extrabold hover:text-blue-400 hover:transition-all">
+                            Connect with us easily
+                            for inquiries, assistance, or collaboration. We welcome your communication and
+                            questions.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col gap-4 ">
+                        <div class="flex items-center gap-3 justify-center lg:justify-start">
+                            <i class="fa-regular fa-envelope text-red-500 text-lg"></i>
+                            <p
+                                class="font-medium text-[#FFFFFF99] hover:text-yellow-400 hover:text-2xl hover:transition-all">
+                                hockeys@support.com</p>
+                        </div>
+
+                        <div class=" flex items-center gap-3 justify-center lg:justify-start">
+                            <i class="fa-solid fa-phone text-red-500 text-lg"></i>
+                            <p
+                                class="font-medium text-[#FFFFFF99] hover:text-yellow-400 hover:text-2xl hover:transition-all">
+                                (+62) 123-321-543</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="flex gap-32  justify-evenly">
+
+                    <div class="text-center lg:text-start flex flex-col gap-6">
+                        <div>
+                            <h2
+                                class="text-lg font-bold text-white hover:text-cyan-400 hover:text-2xl hover:transition-all">
+                                Company</h2>
+                        </div>
+
+                        <div class=" flex flex-col gap-2 font-medium text-[#FFFFFF99]">
+                            <a class="hover:bg-red-500 hover:font-extrabold hover:text-white hover:transition-all py-1 px-2 rounded-lg"
+                                href="#footer">About us</a>
+                            <a class="hover:bg-red-500 hover:font-extrabold hover:text-white hover:transition-all py-1 px-2 rounded-lg"
+                                href="#">Leadership</a>
+                            <a class="hover:bg-red-500 hover:font-extrabold hover:text-white hover:transition-all py-1 px-2 rounded-lg"
+                                href="#">Careers</a>
+                            <a class="hover:bg-red-500 hover:font-extrabold hover:text-white hover:transition-all py-1 px-2 rounded-lg"
+                                href="#news">News & Article</a>
+                            <a class="hover:bg-red-500 hover:font-extrabold hover:text-white hover:transition-all py-1 px-2 rounded-lg"
+                                href="#">Legal Notice</a>
+                        </div>
+                    </div>
+
+                    <div class="text-center lg:text-start flex flex-col gap-6">
+                        <div>
+                            <h2
+                                class="text-lg font-bold text-white hover:text-green-600 hover:text-2xl hover:transition-all">
+                                Support</h2>
+                        </div>
+
+                        <div class=" flex flex-col gap-2 font-medium text-[#FFFFFF99]">
+
+                            <a class="hover:bg-red-500 hover:font-extrabold hover:text-white hover:transition-all py-1 px-2 rounded-lg"
+                                href="#">Help Center</a>
+                            <a class="hover:bg-red-500 hover:font-extrabold hover:text-white hover:transition-all py-1 px-2 rounded-lg"
+                                href="#faq">FAQ</a>
+                            <a class="hover:bg-red-500 hover:font-extrabold hover:text-white hover:transition-all py-1 px-2 rounded-lg"
+                                href="#">Ticket Support</a>
+                            <a class="hover:bg-red-500 hover:font-extrabold hover:text-white hover:transition-all py-1 px-2 rounded-lg"
+                                href="#contact">Contact Us</a>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <div class="flex flex-col gap-6 lg:items-start items-center">
+                    <div>
+                        <h2
+                            class="text-lg font-bold text-white hover:text-yellow-400 hover:text-2xl hover:transition-all">
+                            Services</h2>
+                    </div>
+
+                    <div class="items-center lg:items-start flex flex-col gap-2 font-medium text-[#FFFFFF99]">
+                        <a class="hover:bg-red-500 hover:font-extrabold hover:text-white hover:transition-all py-1 px-2 rounded-lg"
+                            href="#">Academy</a>
+                        <a class="hover:bg-red-500 hover:font-extrabold hover:text-white hover:transition-all py-1 px-2 rounded-lg"
+                            href="#">Group Lesson</a>
+                        <a class="hover:bg-red-500 hover:font-extrabold hover:text-white hover:transition-all py-1 px-2 rounded-lg"
+                            href="#">Private Lesson</a>
+                        <a class="hover:bg-red-500 hover:font-extrabold hover:text-white hover:transition-all py-1 px-2 rounded-lg"
+                            href="#">Hockeys for kids</a>
+                        <a class="hover:bg-red-500 hover:font-extrabold hover:text-white hover:transition-all py-1 px-2 rounded-lg"
+                            href="#">Hockeys for Adult</a>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+            <!-- ---------------------------------------------------  -->
+
+            <!-- Copyright-Section  -->
+
+
+    </footer>
+    <div class="text-center bg-emerald-800 p-2 text-white">
+        <p>&copy; All Rights Reserved | 2024 | Current Time - <span id="current-time"></span></p>
+    </div>
+    
+
+
+
+
+
+
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

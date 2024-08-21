@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <script src="https://kit.fontawesome.com/2c5c5e3d8a.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/2c5c5e3d8a.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f9;
+            color: #333333;
+        }
+        .nav-link:hover {
+            color: #3498db;
+        }
+        .button {
+            background-color: #3498db;
+            color: #ffffff;
+        }
+        .button:hover {
+            background-color: #2ecc71;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <nav class="fixed top-0 z-20 w-full bg-black/50 backdrop-blur-3xl">
+        <div class="w-full top-0 z-10 text-white px-5 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <img class="h-10 w-10" src="./image/logo.png" alt="Logo">
+                    <h3 class="text-2xl font-bold"><span class="text-4xl">F</span>ood<span class="text-amber-400 text-4xl">I</span>CE</h3>
+                </div>
+                <button id="menuBtn" class="block lg:hidden"><i class="fa-solid fa-bars"></i>
+                </button>
+                <ul id="navLinks" class="hidden lg:flex lg:space-x-6 text-sm font-medium">
+                    <li><a class="nav-link" href="./index.html">Home</a></li>
+                    <li><a class="nav-link" href="./about.html">About</a></li>
+                    <li><a class="nav-link" href="./contact.html">Contact</a></li>
+                    <li><a class="nav-link" href="./FAQ.html">FAQ</a></li>
+                </ul>
+                <button
+                    class="hidden lg:block button px-4 py-2 text-sm font-medium transition-all border-2 border-[#3498db] hover:border-white hover:border-2 hover:backdrop-blur-lg hover:bg-transparent">Login</button>
+            </div>
+
+            <div id="mobileMenu" class="lg:hidden mt-4 border-t border-gray-200 p-4 hidden backdrop-blur-md">
+                <ul class="flex flex-col items-center text-sm">
+                    <li class="mb-2"><a class="block py-2 text-center" href="./index.html">Home</a>
+                    </li>
+                    <li class="mb-2"><a class="block py-2 text-center" href="./about.html">About</a>
+                    </li>
+                    <li class="mb-2"><a class="block py-2 text-center"
+                            href="./contact.html">Contact</a>
+                    </li>
+                    <li><a class="block py-2 text-center" href="./FAQ.html">FAQ</a></li>
+                </ul>
+                <div class="flex justify-center">
+                    <button
+                        class=" mt-4 mx-auto button px-4 text-sm py-2 font-medium transition-all border-2 border-[#3498db] hover:border-white hover:backdrop-blur-lg hover:bg-transparent hover:border-2">Login</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ---------FAQ----------- -->
+
+    <div class="mx-auto mt-[100px] p-6">
+        <div class="text-center space-y-4 lg:space-y-6">
+            <h1 class="lg:text-4xl text-2xl font-bold">Clients Question</h1>
+            <p class="text-base font-medium text-pgcol text-[#13131899] lg:w-[600px] mx-auto">Clients inquire,
+                seeking solutions. Our experts provide tailored answers, ensuring satisfaction and effective
+                problem-solving.</p>
+        </div>
+
+        <div class="flex gap-10 mt-10">
+
+            <div class="flex-1 rounded-lg border p-5 flex items-center">
+                <img class="w-full" src="./image/Rectangle 14.png" alt="">
+            </div>
+
+            <div class="flex-1 border rounded-lg p-5">
+                <div>
+                    <div class="bg-white shadow-md rounded-lg mb-4 p-4">
+                        <div class="flex justify-between items-center cursor-pointer faq-question">
+                            <h3 class="text-lg font-semibold">What are your opening hours?</h3>
+                            <svg class="w-6 h-6 transform transition-transform duration-300" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                                </path>
+                            </svg>
+                        </div>
+                        <p class="mt-2 faq-answer hidden">Our opening hours are from 10 AM to 10 PM, Monday to Sunday.</p>
+                    </div>
+                    <div class="bg-white shadow-md rounded-lg mb-4 p-4">
+                        <div class="flex justify-between items-center cursor-pointer faq-question">
+                            <h3 class="text-lg font-semibold">Do you offer home delivery?</h3>
+                            <svg class="w-6 h-6 transform transition-transform duration-300" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                                </path>
+                            </svg>
+                        </div>
+                        <p class="mt-2 faq-answer hidden">Yes, we offer home delivery within a 5-mile radius from our
+                            location.</p>
+                    </div>
+                    <div class="bg-white shadow-md rounded-lg mb-4 p-4">
+                        <div class="flex justify-between items-center cursor-pointer faq-question">
+                            <h3 class="text-lg font-semibold">Are there any vegetarian options?</h3>
+                            <svg class="w-6 h-6 transform transition-transform duration-300" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                                </path>
+                            </svg>
+                        </div>
+                        <p class="mt-2 faq-answer hidden">Yes, we have a variety of vegetarian dishes on our menu.</p>
+                    </div>
+                    <div class="bg-white shadow-md rounded-lg mb-4 p-4">
+                        <div class="flex justify-between items-center cursor-pointer faq-question">
+                            <h3 class="text-lg font-semibold">Can I make a reservation?</h3>
+                            <svg class="w-6 h-6 transform transition-transform duration-300" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                                </path>
+                            </svg>
+                        </div>
+                        <p class="mt-2 faq-answer hidden">Yes, you can make a reservation by calling us or using our online
+                            reservation system.</p>
+                    </div>
+                    <div class="bg-white shadow-md rounded-lg mb-4 p-4">
+                        <div class="flex justify-between items-center cursor-pointer faq-question">
+                            <h3 class="text-lg font-semibold">Can I make a reservation?</h3>
+                            <svg class="w-6 h-6 transform transition-transform duration-300" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                                </path>
+                            </svg>
+                        </div>
+                        <p class="mt-2 faq-answer hidden">Yes, you can make a reservation by calling us or using our online
+                            reservation system.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
